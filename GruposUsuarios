@@ -1,0 +1,20 @@
+#Para tener la opción de crear grupos y usuarios tenemos que entrar al modo de super usuario o root, pues el unico con los permisos requeridos para crearlos.
+#Se utiliza el comando "su" para entrar al modo superusario.
+su
+
+#Para la creación de un grupo se usa el comando "sudo groupadd [Nombre del grupo]"
+sudo groupadd casa
+
+#Para la creación de un grupo se usa el comando "sudo useradd [Nombre del usuario]"
+sudo useradd Violeta
+sudo useradd Edgardo
+
+#Para agregar un usuario a un grupo existente se usa el comando "sudo useradd [Nombre del usuario] [Nombre del grupo]"
+sudo useradd Violeta casa
+sudo useradd Edgardo casa
+
+#Para agregar un usuario a un grupo existente se usa el comando "sudo groupmod -n [Nuevo nombre del grupo] [Antiguo nombre del grupo]"
+sudo groupmod -n Familia casa
+
+#Finalmente para ver los grupos y usuarios que se han creado, se utilizará el comando "sudo cat /etc/group"
+sudo cat /etc/group
